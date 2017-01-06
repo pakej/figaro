@@ -1,6 +1,7 @@
 require "figaro/error"
 require "figaro/env"
 require "figaro/application"
+require "figaro/configuration"
 
 module Figaro
   extend self
@@ -27,6 +28,14 @@ module Figaro
     missing_keys = keys.flatten - ::ENV.keys
     raise MissingKeys.new(missing_keys) if missing_keys.any?
   end
+
+  def self.config
+    Figaro::Configuration
+  end
+
+  def self.configure
+    yield Figaro::Configuration
+  end  
 end
 
 require "figaro/rails"

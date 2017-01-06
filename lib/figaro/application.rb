@@ -69,8 +69,10 @@ module Figaro
     end
 
     def set(key, value)
-      non_string_configuration!(key) unless key.is_a?(String)
-      non_string_configuration!(value) unless value.is_a?(String) || value.nil?
+      unless Figaro.config.ignore_warnings
+        non_string_configuration!(key) unless key.is_a?(String)
+        non_string_configuration!(value) unless value.is_a?(String) || value.nil?
+      end
 
       ::ENV[key.to_s] = value.nil? ? nil : value.to_s
       ::ENV[FIGARO_ENV_PREFIX + key.to_s] = value.nil? ? nil: value.to_s
