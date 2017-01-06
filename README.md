@@ -39,7 +39,7 @@ into `ENV`.
 Add Figaro to your Gemfile and `bundle install`:
 
 ```ruby
-gem "figaro", git: 'https://github.com/zaimramlan/figaro.git'
+gem "figaro", git: "https://github.com/zaimramlan/figaro.git"
 ```
 
 Figaro installation is easy:
@@ -271,7 +271,7 @@ For more information, read the original [The Marriage of Figaro… and Rails](ht
 
 ## How do I silent warnings that appear, if i don't use strings?
 
-If you are lazy to make everything in your `application.yml` to string and hate those warnings that you'll ignore anyway, simply configure figaro in your `application.rb` file
+If you are lazy to stringify your `application.yml` values and hate those warnings that you'll ignore anyway, simply configure figaro in your `application.rb` file
 ```ruby
 # config/application.rb
 
