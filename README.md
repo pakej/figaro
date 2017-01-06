@@ -269,10 +269,12 @@ alternative to `secrets.yml`.
 
 For more information, read the original [The Marriage of Figaro… and Rails](http://www.collectiveidea.com/blog/archives/2013/12/18/the-marriage-of-figaro-and-rails/) blog post.
 
-## How do I silent warnings that appear, if i don't use strings? **New**
+## How do I silent warnings that appear, if i don't use strings? `New`
 
-Simply add this code to your `config/application.rb` file
+Simply configure figaro in your `config/application.rb` file
 ```ruby
+# config/application.rb
+
 # configure figaro here, BEFORE your rails app loads
 Figaro.configure do |config|
     config.ignore_warnings = true
