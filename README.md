@@ -269,6 +269,22 @@ alternative to `secrets.yml`.
 
 For more information, read the original [The Marriage of Figaro… and Rails](http://www.collectiveidea.com/blog/archives/2013/12/18/the-marriage-of-figaro-and-rails/) blog post.
 
+## How do I silent warnings that appear, if i don't use strings? **New**
+
+Simply add this code to your `config/application.rb` file
+```ruby
+# configure figaro here, BEFORE your rails app loads
+Figaro.configure do |config|
+    config.ignore_warnings = true
+end
+
+# Rails app starts loading here
+module MyRailsProject
+    class Application < Rails::Application
+    end
+end
+```
+
 ## How do I upgrade to Figaro 1.0?
 
 In most cases, upgrading from Figaro 0.7 to 1.0 is painless. The format
