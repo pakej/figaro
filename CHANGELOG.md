@@ -1,4 +1,4 @@
-## 1.1.2 / 2017-01-06
+## 1.2.0 / 2017-01-06
 
 * [FEATURE] Add configuration variable to ignore string conversion warnings
 
