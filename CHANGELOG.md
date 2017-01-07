@@ -1,3 +1,7 @@
+## 1.1.2 / 2017-01-06
+
+* [FEATURE] Add configuration variable to ignore string conversion warnings
+
 ## 1.1.1 / 2015-04-30
 
 * [BUGFIX] Fix crash when environment-specific configuration is `nil`

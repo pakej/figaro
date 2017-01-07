@@ -275,7 +275,9 @@ If you are lazy to stringify your `application.yml` values and hate those warnin
 ```ruby
 # config/application.rb
 
-# configure figaro here, BEFORE your rails app loads
+# configure figaro here, 
+# BEFORE your rails app loads
+# AFTER bundler required your gemfile
 Figaro.configure do |config|
     config.ignore_warnings = true
 end
