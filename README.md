@@ -39,7 +39,7 @@ into `ENV`.
 Add Figaro to your Gemfile and `bundle install`:
 
 ```ruby
-gem "figaro", git: "https://github.com/zaimramlan/figaro.git"
+gem "figaro", git: "https://github.com/pakej/figaro.git"
 ```
 
 Figaro installation is easy:
@@ -275,7 +275,7 @@ If you are lazy to stringify your `application.yml` values and hate those warnin
 ```ruby
 # config/application.rb
 
-# configure figaro here, 
+# configure figaro here,
 # BEFORE your rails app loads
 # AFTER bundler required your gemfile
 Figaro.configure do |config|
